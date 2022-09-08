@@ -8,6 +8,7 @@ import { Satellite } from '../satellite';
 })
 
 export class OrbitListComponent implements OnInit {
+	count: number = 0;
 
   @Input() satellites: Satellite[];
   constructor() { }
@@ -25,6 +26,11 @@ export class OrbitListComponent implements OnInit {
 			}
 			return 0;
 		});
+	}
+
+	isEven(): number {
+		this.count++;
+		return this.count;
 	}
 
 }
